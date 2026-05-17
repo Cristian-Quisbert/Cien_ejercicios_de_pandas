@@ -1,0 +1,15 @@
+
+
+
+git init (inicia el directorio como repositorio)
+
+git branch -M main (nombrar a la rama principal como main)
+
+git remote add origin TU_URL_DE_GITHUB_AQUÍ (enlaza el repositorio local con el de github)
+
+git add . (Prepara todo para subirlo al repo de github)
+
+git commit -m "Primer commit: subiendo estructura del proyecto" (hacemos el commit)
+
+git push -u origin main (lo subimos)
+
