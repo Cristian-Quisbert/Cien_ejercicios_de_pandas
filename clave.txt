@@ -1,6 +1,11 @@
 
 
 
+Activación de venv en linux y Windosws:
+source venv/bin/activate
+.\venv\Scripts\Activate.ps1 (powershell)
+
+
 git init (inicia el directorio como repositorio)
 
 git branch -M main (nombrar a la rama principal como main)
@@ -12,4 +17,22 @@ git add . (Prepara todo para subirlo al repo de github)
 git commit -m "Primer commit: subiendo estructura del proyecto" (hacemos el commit)
 
 git push -u origin main (lo subimos)
+
+
+NOTAS:
+No se sube el venv, es muy pesado, se procede así para ignorarlo
+
+touch .gitignore
+
+se escribe dentro el nombre del entorno virtual 'venv/'
+
+pip freeze > requirements.txt (para crear las dependencias del repositorio)
+
+
+para subir nuevas versiones:
+
+git add .
+git commit -m "blabla"
+git push
+
 
