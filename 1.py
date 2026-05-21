@@ -12,3 +12,14 @@ Una columna llamada Volumen con los valores: 50000000, 23000000, 28000000.
 Una vez creado, muestra en pantalla solo las 2 primeras filas del DataFrame.
 """
 
+import pandas as pd
+
+data = {
+    'Ticker': ['AAPL', 'MSFT', 'GOOG'],
+    'Precio': [175.50, 420.20, 150.10],
+    'Volumen': [50000000, 23000000, 28000000],
+}
+
+df_acciones = pd.DataFrame(data)
+
+print(df_acciones.head(2))
