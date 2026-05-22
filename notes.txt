@@ -1,0 +1,29 @@
+6 => ffill(), bfill()
+
+7 => to_datetime(), set_index()
+
+8 => pct_change()
+
+9 => .loc[]
+
+10 => .rolling(window=).mean()
+
+11 => rolling(window=).std()
+
+12 => groupby()[].mean()
+
+13 => groupby()[].agg(['mean', 'std'])
+
+14 => merge(df, dfdf, on='Ticker', how='inner')
+
+15 => pd.concat([df_m ,df_t], ignore_index=True)
+
+16 => df[].rank(ascending=False), df.set_index('', inplace=True)
+
+17 => df['x'] = df_financiero['x'].str.replace('%','', regex=False).astype(float)
+
+18 => df[''] = df[''].apply(lambda x: '' if x>0.29 else '')
+
+19 => df = df_precio[''].resample('5D').max()
+
+20 => df.set_index(['', ''], inplace=True)
