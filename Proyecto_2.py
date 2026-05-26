@@ -29,34 +29,25 @@ df_retornos = df_retornos.astype({
 # la formula de sharpe ratio es: Sharpe = Retorno esperado - Retorno Seguro / Desviación estándar 
 
 # Calculo de retorno anualizado promerio de las 3 estrategias
-Retorno_Anualizado_Promedio_Alfa = df_retornos['Alfa'].mean()*252
-Retorno_Anualizado_Promedio_Beta = df_retornos['Beta'].mean()*252
-Retorno_Anualizado_Promedio_Gamma = df_retornos['Gamma'].mean()*252
-retorno_anual = df_retornos.mean()
+retorno_anual = df_retornos.mean() * 252
 
 # Calculo de la volatilidad anualizada
-Volatilidad_Anualizada_Promedio_Alfa = df_retornos['Alfa'].std() * np.sqrt(252)
-Volatilidad_Anualizada_Promedio_Beta = df_retornos['Beta'].std() * np.sqrt(252)
-Volatilidad_Anualizada_Promedio_Gamma = df_retornos['Gamma'].std() * np.sqrt(252)
 volatilidad_anual = df_retornos.std() * np.sqrt(252)
 
 # Aplicación del sharpe ratio
-Sharpe_Alfa = (Retorno_Anualizado_Promedio_Alfa - 0.04) / (Volatilidad_Anualizada_Promedio_Alfa)
-Sharpe_Beta = (Retorno_Anualizado_Promedio_Beta - 0.04) / (Volatilidad_Anualizada_Promedio_Beta)
-Sharpe_Gamma = (Retorno_Anualizado_Promedio_Gamma - 0.04) / (Volatilidad_Anualizada_Promedio_Gamma)
 Sharpe_ratio = (retorno_anual-0.04)/volatilidad_anual
 
 # df final
 df_metricas = pd.DataFrame({
-    'Alfa':retorno_anual,
+    'Retorno_anual':retorno_anual,
     'Volatilidad_anual':volatilidad_anual,
-    'Ratio_sharpe':Sharpe_ratio
-    'Indicador':['Retorno_anual', 'Volatilidad_anual','Ratio_Sharpe']
+    'Ratio_sharpe':Sharpe_ratio,
 })
 
-df_metricas.set_index('Indicador', inplace=True)
-
+# usamos transponer para que se vea mejor
+df_metricas = df_metricas.transpose()
 
 print(df_metricas)
 
+# mi conclusión es que la estrategia Gamma es la mejor, tiene un rendimiento muy bueno para tener el sharpe 1.57
 

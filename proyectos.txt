@@ -1,0 +1,21 @@
+🗺️ El Camino de los 9 Proyectos Avanzados
+Bloque A: Métricas de Riesgo y Volatilidad (Matemáticas Puras)
+Proyecto 1: El Optimizador de Sharpe Vectorizado. Programarás de forma matricial la volatilidad anualizada y el Ratio de Sharpe para un portafolio de múltiples activos, aprendiendo el concepto de "Tasa Libre de Riesgo".
+
+Proyecto 2: El Calculador de Drawdowns (Racha de Pérdidas). Diseñarás un algoritmo que rastree el Maximum Drawdown (el peor pico a valle en la historia de una cuenta). Requiere dominar máximos acumulados (.cummax()).
+
+Proyecto 3: Value at Risk (VaR) Histórico y Paramétrico. Calcularás la pérdida máxima potencial de un portafolio con un 95% de confianza utilizando estadística descriptiva avanzada sobre tus DataFrames.
+
+Bloque B: Microestructura de Mercado y Datos Sucios
+Proyecto 4: El Reajustador de Splits y Dividendos. Las acciones sufren cambios corporativos (como cuando una acción de $400 se divide en 4 de $100). Crearás un pipeline que ajuste retroactivamente los precios históricos para que el backtest no crea que la acción "cayó" un 75% artificialmente.
+
+Proyecto 5: El Pipeline de Datos Multitemporal (Resampling). Tomarás datos simulados de transacciones minuto a minuto (Alta Frecuencia) y los transformarás a velas de 15 minutos, 1 hora y 1 día usando .resample(), calculando correctamente la Apertura, Máximo, Mínimo y Cierre (OHLC).
+
+Proyecto 6: Detección y Filtrado de Anomalías (Outliers). Los proveedores de datos a veces envían "picos" erróneos (un precio que salta de $100 a $10,000 por un milisegundo por error de servidor). Diseñarás un filtro estadístico basado en el Z-Score móvil para limpiar estos errores automáticamente.
+
+Bloque C: Estrategias de Portafolio Avanzadas
+Proyecto 7: Estrategia de Rebalanceo Automático. Diseñarás un algoritmo para un portafolio 60% Acciones / 40% Bonos. Cada mes, el script debe calcular matemáticamente cuánto vender de lo que subió y cuánto comprar de lo que bajó para volver al peso original.
+
+Proyecto 8: Régimen de Mercado con Bandas de Volatilidad Múltiple. Desarrollarás un sistema condicional complejo que apague tu estrategia si el mercado entra en un periodo de pánico (volatilidad extrema), usando lógica booleana avanzada de Pandas.
+
+Proyecto 9: El Validador de Costos de Transacción e Impacto Financiero. Un backtest sin comisiones es una fantasía. Añadirás a tu motor el cálculo de comisiones del broker por cada operación y el slippage (la diferencia entre el precio que querías y el que realmente te dieron), evaluando cómo los costos devoran una estrategia mediocre.
